@@ -22,12 +22,36 @@ final class SlideBuilder {
     func next(for person: Person) -> Slide {
         let slideNumber = slideNumberManagment.next()
         let answers = answersFabric.answer(with: slideNumber, for: person)
-        let question = questionsFabric.answer(with: slideNumber, for: person)
-        return .init(type: .characteristics(question: question, answers: answers))
+        let question = questionsFabric.question(with: slideNumber, for: person)
+        
+        switch slideNumber.stage {
+        case .portrait:
+            if slideNumber.number == 1 {
+                return .init(type: .intro(
+                    topText: "Привет!",
+                    bottomText: "Меня зовут\n Подаркинатор",
+                    question: question,
+                    answers: answers
+                ))
+            }
+            if slideNumber.number == 2 {
+                return .init(type: .intro(
+                    topText: "Моя цель - помогать тебе",
+                    bottomText: "Помогать с выбором\n подарка для человека",
+                    question: question,
+                    answers: answers
+                ))
+            }
+            return .init(type: .characteristics(question: question, answers: answers))
+        case .interests:
+            return .init(type: .characteristics(question: question, answers: answers))
+        case .present:
+            return .init(type: .characteristics(question: question, answers: answers))
+        }
     }
 }
 
-extension Int {
+private extension Int {
     static func getUniqueRandomNumbers(min: Int, max: Int, count: Int) -> [Int] {
         var set = Set<Int>()
         while set.count < count {

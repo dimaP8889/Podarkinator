@@ -13,11 +13,11 @@ final class SlideNumberManager {
     func next() -> SlideNumber {
         currentSlideNumber += 1
         if currentSlideNumber < 13 {
-            return .init(number: currentSlideNumber, stage: .interests)
-        } else if currentSlideNumber > 12 && currentSlideNumber < 20 {
-            return .init(number: currentSlideNumber - 12, stage: .portrait)
-        } else if currentSlideNumber > 19 {
-            return .init(number: currentSlideNumber - 28, stage: .present)
+            return .init(number: currentSlideNumber, stage: .portrait)
+        } else if currentSlideNumber > 12 && currentSlideNumber < 21 {
+            return .init(number: currentSlideNumber - 12, stage: .interests)
+        } else if currentSlideNumber > 20 {
+            return .init(number: currentSlideNumber, stage: .present)
         }
         return .init(number: 0, stage: .interests)
     }

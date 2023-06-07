@@ -5,9 +5,7 @@
 //  Created by Dmytro Pogrebniak on 01.06.2023.
 //
 
-import Foundation
-
-enum AnswerParameter {
+enum AnswerParameter: Equatable {
     case name
     case age
     case reason(PresentReason)

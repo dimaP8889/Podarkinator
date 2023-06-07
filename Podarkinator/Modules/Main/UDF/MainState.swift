@@ -8,19 +8,7 @@
 import ComposableArchitecture
 
 struct MainState: Equatable {
-    var question: QuestionState?
-    var answers: IdentifiedArrayOf<AnswerState>
-    var present: PresentState?
-    
-    init(currentNode: TreeNode) {
-        var answersArray = IdentifiedArrayOf<AnswerState>()
-        currentNode.children.forEach {
-            if let answer = $0.value.answer {
-                answersArray.append(AnswerState(answer))
-            }
-        }
-        self.answers = answersArray
-        self.question = .init(question: currentNode.value.question)
-    }
+    var top: TopMainState
+    var bottom: BottomMainState
 }
 

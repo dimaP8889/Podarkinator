@@ -17,9 +17,9 @@ enum SlideType: Equatable {
         return false
     }
     
-    case intro(topText: String, bottomText: String, question: String, answers: [NewAnswer])
-    case characteristics(question: String, answers: [NewAnswer])
-    case present(present: NewPresent, question: String, answers: [NewAnswer])
+    case intro(topText: String, bottomText: String, question: String, answers: [Answer])
+    case characteristics(question: String, answers: [Answer])
+    case present(present: Present, question: String, answers: [Answer])
     
     var topText: String? {
         switch self {
@@ -54,7 +54,7 @@ enum SlideType: Equatable {
         }
     }
     
-    var present: NewPresent? {
+    var present: Present? {
         switch self {
         case .intro:
             return nil
@@ -76,7 +76,7 @@ enum SlideType: Equatable {
         }
     }
     
-    var answers: [NewAnswer] {
+    var answers: [Answer] {
         switch self {
         case let .intro(_, _, _, answers):
             return answers

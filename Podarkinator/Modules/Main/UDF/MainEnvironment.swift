@@ -8,5 +8,5 @@
 import ComposableArchitecture
 
 struct MainEnvironment {
-    let treeManager = TreeManager.shared
+    let flowManager = FlowManager()
 }

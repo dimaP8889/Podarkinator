@@ -8,38 +8,34 @@
 import ComposableArchitecture
 
 let mainReducer = AnyReducer<MainState, MainAction, MainEnvironment>.combine(
-    answerReducer.forEach(
-        state: \.answers,
-        action: /MainAction.answer,
-        environment: { _ in Void() }
+    topMainReducer.pullback(
+        state: \.top,
+        action: /MainAction.top,
+        environment: { _ in .init() }
     ),
-    presentReducer.optional().pullback(
-        state: \.present,
-        action: /MainAction.present,
+    bottomMainReducer.pullback(
+        state: \.bottom,
+        action: /MainAction.bottom,
         environment: { _ in .init() }
     ),
     AnyReducer { state, action, environment in
         switch action {
-        case let .answer(_, answerAction):
-            switch answerAction {
-            case let .didTap(answer):
-                guard let node = environment.treeManager.next(for: answer) else {
-                    return .none
-                }
-                state = .init(currentNode: node)
-                if let present = node.getPresent() {
-                    state.present = .init(present: present)
+        case .onAppear:
+            state = environment.flowManager.next()
+            return .none
+        case let .bottom(bottomAction):
+            switch bottomAction {
+            case let .answers(answersAction):
+                switch answersAction {
+                case let .answer(_, singleAnswerAction):
+                    switch singleAnswerAction {
+                    case let .didTapAnswer(parameter):
+                        environment.flowManager.setPerson(parameter: parameter)
+                        state = environment.flowManager.next()
+                        return .none
+                    }
                 }
             }
-            return .none
-        case let .present(presentAction):
-            switch presentAction {
-            case .startAgain:
-                state.present = nil
-                let node = environment.treeManager.startAgain()
-                state = .init(currentNode: node)
-            }
-            return .none
         default:
             return .none
         }

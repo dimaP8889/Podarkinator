@@ -5,12 +5,10 @@
 //  Created by Dmytro Pogrebniak on 04.06.2023.
 //
 
-import Foundation
-
 struct QuestionFabric {
     private var interestsQuestionsDictionary = [Int:Int]()
     
-    func answer(with slideNumber: SlideNumber, for person: Person) -> String {
+    func question(with slideNumber: SlideNumber, for person: Person) -> String {
         let stage = slideNumber.stage
         switch stage {
         case .portrait:
@@ -88,12 +86,12 @@ private extension QuestionFabric {
             return InterestsQuestions.cooking
         case 2:
             let question = InterestsQuestions.travelling
-            let sex = person.sex == .male ? "он" : "она"
+            let sex = person.sex == .male ? "Он" : "Она"
             let finalQuestion = question.replacingOccurrences(of: "%@", with: sex)
             return finalQuestion
         case 3:
             let question = InterestsQuestions.photo
-            let sex = person.sex == .male ? "он" : "она"
+            let sex = person.sex == .male ? "Он" : "Она"
             let finalQuestion = question.replacingOccurrences(of: "%@", with: sex)
             return finalQuestion
         case 4:
@@ -113,12 +111,12 @@ private extension QuestionFabric {
             return finalQuestion
         case 7:
             let question = InterestsQuestions.drawing
-            let sex = person.sex == .male ? "он" : "она"
+            let sex = person.sex == .male ? "Он" : "Она"
             let finalQuestion = question.replacingOccurrences(of: "%@", with: sex)
             return finalQuestion
         case 8:
             let question = InterestsQuestions.homeComfort
-            let sex = person.sex == .male ? "он" : "она"
+            let sex = person.sex == .male ? "Он" : "Она"
             let finalQuestion = question.replacingOccurrences(of: "%@", with: sex)
             return finalQuestion
         case 9:
@@ -150,7 +148,7 @@ private extension QuestionFabric {
             return finalQuestion
         case 15:
             let question = InterestsQuestions.cinemaphil
-            let sex = person.sex == .male ? "он" : "она"
+            let sex = person.sex == .male ? "его" : "ее"
             let finalQuestion = question.replacingOccurrences(of: "%@", with: sex)
             return finalQuestion
         case 16:
@@ -180,13 +178,13 @@ private struct InterestsQuestions {
     static let cooking = "Любит ли готовить?"
     static let travelling = "%@\n путешественник?"
     static let photo = "%@ - фотограф?"
-    static let music = "Играет ли %name% на\n музыкальных\n инструментах?"
+    static let music = "Играет ли %@ на\n музыкальных\n инструментах?"
     static let reading = "Какую литературу читает %@?"
     static let sport = "Каким спортом\n предпочитает\n заниматься %@?"
     static let drawing = "%@ любит рисовать?"
     static let homeComfort = "%@ любит домашний\n уют, верно?"
     static let boardGames = "Как насчет настольных\n игр?"
-    static let pets = "Если у %@ домашние\n животные?"
+    static let pets = "Есть ли у %@ домашние\n животные?"
     static let videoGames = "%@ играет в видео\n игры?"
     static let craft = "Возможно %@\n любит работать руками,\n ремесло, рукоделие.\n Верно?"
     static let alcohol = "Ценит ли %@\n хороший алкоголь?"

@@ -8,7 +8,8 @@
 import Foundation
 
 enum MainAction: Equatable {
-    case answer(id: UUID, answer: AnswerAction)
-    case question(QuestionAction)
-    case present(PresentAction)
+    case top(TopMainAction)
+    case bottom(BottomMainAction)
+    
+    case onAppear
 }

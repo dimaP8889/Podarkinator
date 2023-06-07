@@ -6,6 +6,10 @@
 //
 
 struct RootState: Equatable {
-    var main = MainState(currentNode: TreeManager.shared.tree)
+    var main: MainState
+    
+    init() {
+        self.main = MainState(top: .init(), bottom: .init(question: "Start", answers: []))
+    }
 }
 
