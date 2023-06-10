@@ -30,11 +30,14 @@ let mainReducer = AnyReducer<MainState, MainAction, MainEnvironment>.combine(
                 case let .answer(_, singleAnswerAction):
                     switch singleAnswerAction {
                     case let .didTapAnswer(parameter):
-                        environment.flowManager.setPerson(parameter: parameter)
+                        let value = state.bottom.customInputValue
+                        environment.flowManager.setPerson(parameter: parameter, with: value)
                         state = environment.flowManager.next()
                         return .none
                     }
                 }
+            case .customInputs:
+                return .none
             }
         default:
             return .none

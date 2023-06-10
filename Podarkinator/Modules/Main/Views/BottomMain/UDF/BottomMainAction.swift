@@ -6,5 +6,6 @@
 //
 
 enum BottomMainAction: Equatable {
+    case customInputs(CustomInputsAction)
     case answers(AnswersAction)
 }

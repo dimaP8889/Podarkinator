@@ -57,7 +57,7 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(
             store: .init(
-                initialState: .init(top: .init(), bottom: .init(question: "Test", answers: [])),
+                initialState: .init(top: .init(), bottom: .init(question: "Test", customInput: nil, answers: [])),
                 reducer: .empty,
                 environment: MainEnvironment()
             )

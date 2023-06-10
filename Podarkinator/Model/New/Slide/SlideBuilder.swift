@@ -42,11 +42,19 @@ final class SlideBuilder {
                     answers: answers
                 ))
             }
-            return .init(type: .characteristics(question: question, answers: answers))
+            let customInput: CustomInput? = {
+                switch slideNumber.number {
+                case 3:     return .name
+                case 4:     return .age
+                case 6:     return .budget
+                default:    return nil
+                }
+            }()
+            return .init(type: .characteristics(question: question, customInput: customInput, answers: answers))
         case .interests:
-            return .init(type: .characteristics(question: question, answers: answers))
+            return .init(type: .characteristics(question: question, customInput: nil, answers: answers))
         case .present:
-            return .init(type: .characteristics(question: question, answers: answers))
+            return .init(type: .characteristics(question: question, customInput: nil, answers: answers))
         }
     }
 }

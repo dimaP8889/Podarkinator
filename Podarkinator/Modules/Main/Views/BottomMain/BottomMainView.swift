@@ -39,6 +39,10 @@ private extension BottomMainView {
             VStack {
                 question
                 Spacer()
+                customInput
+                if viewStore.customInputState != nil {
+                    Spacer()
+                }
                 answers
                 Spacer()
             }
@@ -57,6 +61,20 @@ private extension BottomMainView {
         }
     }
     
+    var customInput: some View {
+        WithViewStore(self.store) { viewStore in
+            IfLetStore(
+                store.scope(
+                    state: \.customInputState,
+                    action: Action.customInputs
+                ), then: { viewStore in
+                    CustomInputsView(store: viewStore)
+                }
+            )
+            .padding(.horizontal, 78)
+        }
+    }
+    
     var answers: some View {
         WithViewStore(self.store) { viewStore in
             AnswersView(store: store.scope(
@@ -64,6 +82,7 @@ private extension BottomMainView {
                 action: BottomMainAction.answers
             ))
         }
+        .padding(.bottom, 30)
     }
 }
 
@@ -76,7 +95,7 @@ struct BottomMainView_Previews: PreviewProvider {
     static var previews: some View {
         BottomMainView(
             store: .init(
-                initialState: .init(question: "Hello world", answers: []),
+                initialState: .init(question: "Hello world", customInput: nil, answers: []),
                 reducer: .empty,
                 environment: BottomMainEnvironment()
             )

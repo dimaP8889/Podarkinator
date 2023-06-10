@@ -57,6 +57,21 @@
 		F16E33172A2F564E0023DE0B /* SingleAnswerReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E33122A2F564D0023DE0B /* SingleAnswerReducer.swift */; };
 		F16E33182A2F564E0023DE0B /* SingleAnswerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E33132A2F564E0023DE0B /* SingleAnswerState.swift */; };
 		F16E331D2A2F5AC00023DE0B /* ScaleOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E331C2A2F5AC00023DE0B /* ScaleOnTap.swift */; };
+		F1B31C982A34AF7100DC1D59 /* NameInputAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31C932A34AF7100DC1D59 /* NameInputAction.swift */; };
+		F1B31C992A34AF7100DC1D59 /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31C942A34AF7100DC1D59 /* NameInputView.swift */; };
+		F1B31C9A2A34AF7100DC1D59 /* NameInputEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31C952A34AF7100DC1D59 /* NameInputEnvironment.swift */; };
+		F1B31C9B2A34AF7100DC1D59 /* NameInputReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31C962A34AF7100DC1D59 /* NameInputReducer.swift */; };
+		F1B31C9C2A34AF7100DC1D59 /* NameInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31C972A34AF7100DC1D59 /* NameInputState.swift */; };
+		F1B31CA42A34B33800DC1D59 /* NumberInputAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31C9F2A34B33800DC1D59 /* NumberInputAction.swift */; };
+		F1B31CA52A34B33800DC1D59 /* NumberInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CA02A34B33800DC1D59 /* NumberInputView.swift */; };
+		F1B31CA62A34B33800DC1D59 /* NumberInputEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CA12A34B33800DC1D59 /* NumberInputEnvironment.swift */; };
+		F1B31CA72A34B33800DC1D59 /* NumberInputReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CA22A34B33800DC1D59 /* NumberInputReducer.swift */; };
+		F1B31CA82A34B33800DC1D59 /* NumberInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CA32A34B33800DC1D59 /* NumberInputState.swift */; };
+		F1B31CBC2A35028500DC1D59 /* CustomInputsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CB72A35028500DC1D59 /* CustomInputsAction.swift */; };
+		F1B31CBD2A35028500DC1D59 /* CustomInputsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CB82A35028500DC1D59 /* CustomInputsView.swift */; };
+		F1B31CBE2A35028500DC1D59 /* CustomInputsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CB92A35028500DC1D59 /* CustomInputsEnvironment.swift */; };
+		F1B31CBF2A35028500DC1D59 /* CustomInputsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CBA2A35028500DC1D59 /* CustomInputsReducer.swift */; };
+		F1B31CC02A35028500DC1D59 /* CustomInputsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B31CBB2A35028500DC1D59 /* CustomInputsState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +127,21 @@
 		F16E33122A2F564D0023DE0B /* SingleAnswerReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAnswerReducer.swift; sourceTree = "<group>"; };
 		F16E33132A2F564E0023DE0B /* SingleAnswerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAnswerState.swift; sourceTree = "<group>"; };
 		F16E331C2A2F5AC00023DE0B /* ScaleOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleOnTap.swift; sourceTree = "<group>"; };
+		F1B31C932A34AF7100DC1D59 /* NameInputAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputAction.swift; sourceTree = "<group>"; };
+		F1B31C942A34AF7100DC1D59 /* NameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
+		F1B31C952A34AF7100DC1D59 /* NameInputEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputEnvironment.swift; sourceTree = "<group>"; };
+		F1B31C962A34AF7100DC1D59 /* NameInputReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputReducer.swift; sourceTree = "<group>"; };
+		F1B31C972A34AF7100DC1D59 /* NameInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputState.swift; sourceTree = "<group>"; };
+		F1B31C9F2A34B33800DC1D59 /* NumberInputAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputAction.swift; sourceTree = "<group>"; };
+		F1B31CA02A34B33800DC1D59 /* NumberInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputView.swift; sourceTree = "<group>"; };
+		F1B31CA12A34B33800DC1D59 /* NumberInputEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputEnvironment.swift; sourceTree = "<group>"; };
+		F1B31CA22A34B33800DC1D59 /* NumberInputReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputReducer.swift; sourceTree = "<group>"; };
+		F1B31CA32A34B33800DC1D59 /* NumberInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputState.swift; sourceTree = "<group>"; };
+		F1B31CB72A35028500DC1D59 /* CustomInputsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputsAction.swift; sourceTree = "<group>"; };
+		F1B31CB82A35028500DC1D59 /* CustomInputsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputsView.swift; sourceTree = "<group>"; };
+		F1B31CB92A35028500DC1D59 /* CustomInputsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputsEnvironment.swift; sourceTree = "<group>"; };
+		F1B31CBA2A35028500DC1D59 /* CustomInputsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputsReducer.swift; sourceTree = "<group>"; };
+		F1B31CBB2A35028500DC1D59 /* CustomInputsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputsState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +401,7 @@
 		F16E33012A2F55F50023DE0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F1B31C912A34AF1400DC1D59 /* Custom Inputs */,
 				F16E33022A2F56150023DE0B /* Answers */,
 			);
 			path = Views;
@@ -438,6 +469,76 @@
 				F142BC0A2A2C734B00597045 /* New */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F1B31C912A34AF1400DC1D59 /* Custom Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31CC12A350A6500DC1D59 /* UDF */,
+				F1B31CC22A350A9D00DC1D59 /* Views */,
+				F1B31CB82A35028500DC1D59 /* CustomInputsView.swift */,
+			);
+			path = "Custom Inputs";
+			sourceTree = "<group>";
+		};
+		F1B31C922A34AF2000DC1D59 /* Name Input */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31C9D2A34AF7600DC1D59 /* UDF */,
+			);
+			path = "Name Input";
+			sourceTree = "<group>";
+		};
+		F1B31C9D2A34AF7600DC1D59 /* UDF */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31C932A34AF7100DC1D59 /* NameInputAction.swift */,
+				F1B31C952A34AF7100DC1D59 /* NameInputEnvironment.swift */,
+				F1B31C962A34AF7100DC1D59 /* NameInputReducer.swift */,
+				F1B31C972A34AF7100DC1D59 /* NameInputState.swift */,
+			);
+			path = UDF;
+			sourceTree = "<group>";
+		};
+		F1B31C9E2A34B27500DC1D59 /* Number Input */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31CA92A34B33B00DC1D59 /* UDF */,
+				F1B31C942A34AF7100DC1D59 /* NameInputView.swift */,
+			);
+			path = "Number Input";
+			sourceTree = "<group>";
+		};
+		F1B31CA92A34B33B00DC1D59 /* UDF */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31C9F2A34B33800DC1D59 /* NumberInputAction.swift */,
+				F1B31CA12A34B33800DC1D59 /* NumberInputEnvironment.swift */,
+				F1B31CA22A34B33800DC1D59 /* NumberInputReducer.swift */,
+				F1B31CA32A34B33800DC1D59 /* NumberInputState.swift */,
+			);
+			path = UDF;
+			sourceTree = "<group>";
+		};
+		F1B31CC12A350A6500DC1D59 /* UDF */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31CB72A35028500DC1D59 /* CustomInputsAction.swift */,
+				F1B31CB92A35028500DC1D59 /* CustomInputsEnvironment.swift */,
+				F1B31CBA2A35028500DC1D59 /* CustomInputsReducer.swift */,
+				F1B31CBB2A35028500DC1D59 /* CustomInputsState.swift */,
+			);
+			path = UDF;
+			sourceTree = "<group>";
+		};
+		F1B31CC22A350A9D00DC1D59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1B31C922A34AF2000DC1D59 /* Name Input */,
+				F1B31CA02A34B33800DC1D59 /* NumberInputView.swift */,
+				F1B31C9E2A34B27500DC1D59 /* Number Input */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,12 +622,17 @@
 			files = (
 				F129CBA829FF82E5002F3996 /* MainState.swift in Sources */,
 				F129CB9829FF78F5002F3996 /* RootView.swift in Sources */,
+				F1B31CBD2A35028500DC1D59 /* CustomInputsView.swift in Sources */,
 				F129CBA629FF82E5002F3996 /* MainEnvironment.swift in Sources */,
+				F1B31CBC2A35028500DC1D59 /* CustomInputsAction.swift in Sources */,
+				F1B31CA72A34B33800DC1D59 /* NumberInputReducer.swift in Sources */,
 				F16E32EE2A2F31A30023DE0B /* TopMainReducer.swift in Sources */,
+				F1B31CC02A35028500DC1D59 /* CustomInputsState.swift in Sources */,
 				F129CBA529FF82E5002F3996 /* MainView.swift in Sources */,
 				F16E32F22A2F32D00023DE0B /* Fonts.swift in Sources */,
 				F16E33152A2F564E0023DE0B /* SingleAnswerView.swift in Sources */,
 				F16E32EF2A2F31A30023DE0B /* TopMainState.swift in Sources */,
+				F1B31C992A34AF7100DC1D59 /* NameInputView.swift in Sources */,
 				F16E33082A2F56290023DE0B /* AnswersAction.swift in Sources */,
 				F16E331D2A2F5AC00023DE0B /* ScaleOnTap.swift in Sources */,
 				F16E32FF2A2F39280023DE0B /* BottomMainState.swift in Sources */,
@@ -536,6 +642,7 @@
 				F129CB9929FF78F5002F3996 /* RootEnvironment.swift in Sources */,
 				F142BC042A29002800597045 /* SlideBuilder.swift in Sources */,
 				F16E33162A2F564E0023DE0B /* SingleAnswerEnvironment.swift in Sources */,
+				F1B31C9C2A34AF7100DC1D59 /* NameInputState.swift in Sources */,
 				F142BBFA2A28B6EF00597045 /* Present.swift in Sources */,
 				F142BC242A2C73A800597045 /* AnswerParameter.swift in Sources */,
 				F142BBF72A28B39800597045 /* Answer.swift in Sources */,
@@ -545,21 +652,30 @@
 				F142BC022A28BBDE00597045 /* SlideNumber.swift in Sources */,
 				F16E32FD2A2F39280023DE0B /* BottomMainEnvironment.swift in Sources */,
 				F142BC092A2C644900597045 /* QuestionFabric.swift in Sources */,
+				F1B31CA82A34B33800DC1D59 /* NumberInputState.swift in Sources */,
 				F142BBF12A286BD700597045 /* Person.swift in Sources */,
 				F129CB9A29FF78F5002F3996 /* RootReducer.swift in Sources */,
 				F16E32D92A2F29570023DE0B /* Colors.swift in Sources */,
 				F16E33172A2F564E0023DE0B /* SingleAnswerReducer.swift in Sources */,
+				F1B31CBE2A35028500DC1D59 /* CustomInputsEnvironment.swift in Sources */,
 				F16E32ED2A2F31A30023DE0B /* TopMainEnvironment.swift in Sources */,
 				F16E330B2A2F56290023DE0B /* AnswersReducer.swift in Sources */,
+				F1B31C982A34AF7100DC1D59 /* NameInputAction.swift in Sources */,
+				F1B31CA42A34B33800DC1D59 /* NumberInputAction.swift in Sources */,
 				F142BBFD2A28B83400597045 /* FlowManager.swift in Sources */,
 				F16E32EC2A2F31A30023DE0B /* TopMainView.swift in Sources */,
 				F16E32FC2A2F39280023DE0B /* BottomMainView.swift in Sources */,
 				F16E32FE2A2F39280023DE0B /* BottomMainReducer.swift in Sources */,
 				F16E33182A2F564E0023DE0B /* SingleAnswerState.swift in Sources */,
+				F1B31CA62A34B33800DC1D59 /* NumberInputEnvironment.swift in Sources */,
 				F129CB7C29FF7280002F3996 /* PodarkinatorApp.swift in Sources */,
+				F1B31CBF2A35028500DC1D59 /* CustomInputsReducer.swift in Sources */,
 				F16E32EB2A2F31A30023DE0B /* TopMainAction.swift in Sources */,
+				F1B31CA52A34B33800DC1D59 /* NumberInputView.swift in Sources */,
 				F142BC062A29004C00597045 /* AnswersFabric.swift in Sources */,
 				F129CBA729FF82E5002F3996 /* MainReducer.swift in Sources */,
+				F1B31C9A2A34AF7100DC1D59 /* NameInputEnvironment.swift in Sources */,
+				F1B31C9B2A34AF7100DC1D59 /* NameInputReducer.swift in Sources */,
 				F16E32FB2A2F39280023DE0B /* BottomMainAction.swift in Sources */,
 				F16E33092A2F56290023DE0B /* AnswersView.swift in Sources */,
 				F16E330C2A2F56290023DE0B /* AnswersState.swift in Sources */,

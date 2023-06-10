@@ -29,16 +29,16 @@ struct Person {
     var growingPlants: PersonGrowingPlants = .no
     var watchMovies: PersonWatchMovies = .no
     
-    mutating func set(_ parameter: AnswerParameter, with customAnswer: CustomAnswer<Any>?) {
+    mutating func set(_ parameter: AnswerParameter, with customAnswer: Any?) {
         switch parameter {
         case .name:
-            self.name = customAnswer?.value as? String ?? ""
+            self.name = customAnswer as? String ?? ""
         case .age:
-            self.age = customAnswer?.value as? Int ?? 0
+            self.age = customAnswer as? Int ?? 0
         case let .reason(value):
             self.reason = value
         case .budget:
-            self.budget = customAnswer?.value as? Int ?? 0
+            self.budget = customAnswer as? Int ?? 0
         case let .sex(value):
             self.sex = value
         case let .cook(value):

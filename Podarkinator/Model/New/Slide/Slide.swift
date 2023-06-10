@@ -11,6 +11,12 @@ struct Slide: Equatable {
     var type: SlideType
 }
 
+enum CustomInput {
+    case age
+    case budget
+    case name
+}
+
 enum SlideType: Equatable {
     #warning("Change later")
     static func == (lhs: SlideType, rhs: SlideType) -> Bool {
@@ -18,7 +24,7 @@ enum SlideType: Equatable {
     }
     
     case intro(topText: String, bottomText: String, question: String, answers: [Answer])
-    case characteristics(question: String, answers: [Answer])
+    case characteristics(question: String, customInput: CustomInput?, answers: [Answer])
     case present(present: Present, question: String, answers: [Answer])
     
     var topText: String? {
@@ -69,10 +75,21 @@ enum SlideType: Equatable {
         switch self {
         case let .intro(_, _, question, _):
             return question
-        case let .characteristics(question, _):
+        case let .characteristics(question, _, _):
             return question
         case let .present(_, question, _):
             return question
+        }
+    }
+    
+    var customInput: CustomInput? {
+        switch self {
+        case .intro:
+            return nil
+        case let .characteristics(_, customInput, _):
+            return customInput
+        case .present:
+            return nil
         }
     }
     
@@ -80,7 +97,7 @@ enum SlideType: Equatable {
         switch self {
         case let .intro(_, _, _, answers):
             return answers
-        case let .characteristics(_, answers):
+        case let .characteristics(_, _, answers):
             return answers
         case let .present(_, _, answers):
             return answers

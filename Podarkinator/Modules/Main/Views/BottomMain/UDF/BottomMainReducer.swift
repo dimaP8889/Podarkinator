@@ -12,6 +12,10 @@ let bottomMainReducer = AnyReducer<BottomMainState, BottomMainAction, BottomMain
         state: \BottomMainState.answers,
         action: /BottomMainAction.answers,
         environment: { _ in .init() }
+    ),
+    customInputsReducer.optional().pullback(
+        state: \BottomMainState.customInputState,
+        action: /BottomMainAction.customInputs,
+        environment: { _ in .init() }
     )
 )
-

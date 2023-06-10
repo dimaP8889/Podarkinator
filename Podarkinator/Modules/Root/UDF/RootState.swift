@@ -9,7 +9,7 @@ struct RootState: Equatable {
     var main: MainState
     
     init() {
-        self.main = MainState(top: .init(), bottom: .init(question: "Start", answers: []))
+        self.main = MainState(top: .init(), bottom: .init(question: "Start", customInput: nil, answers: []))
     }
 }
 

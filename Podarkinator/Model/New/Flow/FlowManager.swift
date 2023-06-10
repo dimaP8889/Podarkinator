@@ -14,11 +14,15 @@ final class FlowManager {
     func next() -> MainState {
         let slider = slideBuilder.next(for: person)
         let top = TopMainState(topText: slider.type.topText, bottomText: slider.type.bottomText)
-        let bottom = BottomMainState(question: slider.type.question, answers: slider.type.answers)
+        let bottom = BottomMainState(
+            question: slider.type.question,
+            customInput: slider.type.customInput,
+            answers: slider.type.answers
+        )
         return MainState(top: top, bottom: bottom)
     }
     
-    func setPerson(parameter: AnswerParameter?, with customAnswer: CustomAnswer<Any>? = nil) {
+    func setPerson(parameter: AnswerParameter?, with customAnswer: Any? = nil) {
         guard let parameter = parameter else { return }
         person.set(parameter, with: customAnswer)
     }

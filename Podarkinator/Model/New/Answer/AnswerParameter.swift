@@ -27,7 +27,3 @@ enum AnswerParameter: Equatable {
     case growingPlants(PersonGrowingPlants)
     case watchMovies(PersonWatchMovies)
 }
-
-struct CustomAnswer<T> {
-    let value: T
-}
