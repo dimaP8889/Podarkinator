@@ -19,7 +19,7 @@ struct BottomMainView: View {
             slider
             info
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: UIScreen.main.bounds.height / 2)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2)
     }
 }
 
